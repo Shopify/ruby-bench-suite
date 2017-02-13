@@ -87,7 +87,7 @@ class BenchmarkDriver
       'benchmark_type[digest]' => generate_digest(path, database),
       'benchmark_run[environment]' => "#{`ruby -v`}",
       'repo' => 'rails',
-      'organization' => 'rails'
+      'organization' => ENV['ORGANIZATION']
     }
 
     if(ENV['RAILS_COMMIT_HASH'])

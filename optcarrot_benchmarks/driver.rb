@@ -45,7 +45,7 @@ request.set_form_data({
   "benchmark_run[result][default]" => avg_fps,
   'benchmark_run[environment]' => { "Ruby version" => `ruby -v`, "Checksum" => checksum }.to_yaml,
   'repo' => 'ruby',
-  'organization' => 'ruby'
+  'organization' => ENV['ORGANIZATION']
 }.merge(initiator_hash))
 
 puts http.request(request).body

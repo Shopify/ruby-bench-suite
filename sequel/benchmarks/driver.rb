@@ -82,7 +82,7 @@ class BenchmarkDriver
       'benchmark_type[digest]' => generate_digest(path, database),
       'benchmark_run[environment]' => "#{`ruby -v`}",
       'repo' => 'sequel',
-      'organization' => 'sequel'
+      'organization' => ENV['ORGANIZATION']
     }
 
     if(ENV['SEQUEL_COMMIT_HASH'])

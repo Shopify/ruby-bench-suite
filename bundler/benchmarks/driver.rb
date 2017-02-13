@@ -62,7 +62,7 @@ class BenchmarkDriver
       'benchmark_type[digest]' => generate_digest(path),
       'benchmark_run[environment]' => "#{`ruby -v; gem -v`.strip}",
       'repo' => 'bundler',
-      'organization' => 'bundler'
+      'organization' => ENV['ORGANIZATION']
     }.merge(initiator_hash)
 
     request.set_form_data(submit.merge(

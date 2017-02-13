@@ -301,7 +301,7 @@ begin
     'benchmark_type[digest]' => generate_digest,
     'benchmark_run[environment]' => environment.to_yaml,
     'repo' => 'ruby',
-    'organization' => 'ruby'
+    'organization' => ENV['ORGANIZATION']
   }.merge(form_results))
 
   http.request(request)

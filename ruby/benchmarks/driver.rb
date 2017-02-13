@@ -175,7 +175,7 @@ class BenchmarkDriver
         "benchmark_run[result][#{v}]" => rets.first,
         'benchmark_run[environment]' => @execs.map { |(_,v)| v }.first,
         'repo' => 'ruby',
-        'organization' => 'ruby'
+        'organization' => ENV['ORGANIZATION']
       }.merge(initiator_hash))
 
       http.request(request)
