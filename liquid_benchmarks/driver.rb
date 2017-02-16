@@ -7,7 +7,7 @@ require 'json'
 require 'pathname'
 require 'optparse'
 
-RAW_URL = 'https://raw.githubusercontent.com/ruby-bench/ruby-bench-suite/master/liquid/benchmarks/'
+RAW_URL = 'https://raw.githubusercontent.com/ruby-bench/ruby-bench-suite/master/liquid_benchmarks/'
 
 class BenchmarkDriver
   def self.benchmark(options)
